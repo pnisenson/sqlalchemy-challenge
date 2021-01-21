@@ -36,11 +36,11 @@ def home():
 	return(
 		f'<b/>Welcome to my Climate App.</b></br></br>'
 		f'The available routes are:</br></br>'
-		f'/api/v1.0/precipitation</br>'
-		f'/api/v1.0/stations</br>'
-		f'/api/v1.0/tobs</br>'
-		f'/api/v1.0/"<start>"</br>'
-		"'/api/v1.0/<start>/<end>' for min/avg/max temperatures between two dates")
+		f'/api/v1.0/precipitation <i/>for precipitation at all stations for the last year of available data.</i></br>'
+		f'/api/v1.0/stations <i/>for a list of stations. </i></br>'
+		f'/api/v1.0/tobs <i/>for temperatures at the most used station for the last year of available data. </i></br>'
+		f'/api/v1.0/{{start}} <i/>for min/avg/max temperatures after given date in %Y-%m-%d format. </i></br>'
+		f'/api/v1.0/{{start}}/{{end}} <i/>for min/avg/max temperatures between two dates in %Y-%m-%d format.</i>')
 
 @app.route('/api/v1.0/precipitation')
 def precipitation():
